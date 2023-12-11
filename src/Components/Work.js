@@ -7,12 +7,52 @@ import textutils from "./textutils.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-export default function Work() {
+const Card = ({ imageUrl, title, description, link, aosAnimation }) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    setMousePosition({ x: clientX, y: clientY });
+  };
+
+  const calculateRotation = () => {
+    const tiltMax = 70;
+    const { x, y } = mousePosition;
+
+    const rotationX = (y / window.innerHeight - 0.5) * tiltMax;
+    const rotationY = (x / window.innerWidth - 0.5) * tiltMax;
+
+    return `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+  };
+
+  return (
+    <Link to={link} data-aos={aosAnimation}>
+      <div
+        className="card"
+        style={{
+          width: "18rem",
+          transform: calculateRotation(),
+        }}
+        onMouseMove={handleMouseMove}
+      >
+        <img className="card-img-top" src={imageUrl} alt="Card image cap" />
+        <div className="card-body">
+          <p className="card-text">
+            {title}
+            <br />
+            {description}
+          </p>
+        </div>
+      </div>
+    </Link>
+  );
+};
+
+const Work = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     Aos.init({ duration: 2000 });
-    // Add a scroll event listener to update the state based on the scroll position
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 0);
@@ -20,7 +60,6 @@ export default function Work() {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -33,10 +72,8 @@ export default function Work() {
           Home
         </Link>
       </div>
-      <div className="mt-5">
-        {/* Add some space to compensate for the fixed navbar */}
-      </div>
-      <div className=" d-flex justify-content-center">
+      <div className="mt-5"></div>
+      <div className="d-flex justify-content-center">
         <h1 className="mywork">My Work</h1>
       </div>
       <div>
@@ -47,20 +84,13 @@ export default function Work() {
         </p>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Link to="/Newsgoose" data-aos="flip-left">
-          <div className="card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top"
-              src={newsgoose}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <p className="card-text">
-                NewsGoose <br></br>A daily News app
-              </p>
-            </div>
-          </div>
-        </Link>
+        <Card
+          imageUrl={newsgoose}
+          title="NewsGoose"
+          description="A daily News app"
+          link="/Newsgoose"
+          aosAnimation="flip-left"
+        />
         <a
           href="https://meeetpatel.github.io/Shreehari/"
           style={{
@@ -69,41 +99,24 @@ export default function Work() {
           }}
           data-aos="fade-down"
         >
-          <div
-            className="card"
-            style={{
-              width: "18rem",
-            }}
-          >
-            <img
-              className="card-img-top"
-              src={shreehari}
-              style={{ maxHeight: "100%" }}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <p className="card-text">
-                Shree Hari
-                <br></br>Interior Designs
-              </p>
-            </div>
-          </div>
+          <Card
+            imageUrl={shreehari}
+            title="Shree Hari"
+            description="Interior Designs"
+            link="https://meeetpatel.github.io/Shreehari/"
+          />
         </a>
         <a href="https://meeetpatel.github.io/TextUtils/" data-aos="flip-right">
-          <div className="card" style={{ width: "18rem" }}>
-            <img
-              className="card-img-top"
-              src={textutils}
-              alt="Card image cap"
-            />
-            <div className="card-body">
-              <p className="card-text">
-                Textutils <br></br>Modify your text
-              </p>
-            </div>
-          </div>
+          <Card
+            imageUrl={textutils}
+            title="Textutils"
+            description="Modify your text"
+            link="https://meeetpatel.github.io/TextUtils/"
+          />
         </a>
       </div>
     </>
   );
-}
+};
+
+export default Work;

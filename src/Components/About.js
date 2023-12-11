@@ -55,7 +55,7 @@ export default function About() {
           <span className="badge badge-pill badge1 ">HTML/CSS</span>
           <span className="badge badge-pill badge2">JAVASCRIP</span>
           <span className="badge badge-pill badge3 ">REACT</span>
-          <span className="badge badge-pill badge4">REACT</span>
+          <span className="badge badge-pill badge4">Responsive Design</span>
           <span className="badge badge-pill badge5 ">node</span>
           <span className="badge badge-pill badge6 ">python</span>
           <span className="badge badge-pill badge7 ">git</span>
@@ -84,7 +84,7 @@ export default function About() {
             just come up with ideas. Instead I have an almost impulsive need to
             act on them.
           </p>
-          <p data-aos="flip-right">
+          <p data-aos="flip-">
             My abundant energy fuels me in the pursuit of many interests,
             hobbies, areas of study and artistic endeavors. I’m a fast learner,
             able to pick up new skills and juggle different projects and roles

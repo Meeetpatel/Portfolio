@@ -65,6 +65,8 @@ export default function Contact() {
         </a>
         <br></br>
         <a href="https://www.linkedin.com/in/meet-patel25/">LinkedIn</a>
+        <br></br>
+        <a href="https://github.com/Meeetpatel">Github</a>
       </div>
     </div>
   );

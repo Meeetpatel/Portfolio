@@ -3,16 +3,19 @@ import Aos from "aos";
 import "aos/dist/aos.css"; // Import the AOS styles
 import newsgoose from "./NewsGoose.mp4";
 import { Link } from "react-router-dom";
-
+import "./contact.css";
 export default function NewsGoose() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
   return (
-    <div>
-      <Link to="/" className="home mt-4">
+    <div className="mb-5">
+      <Link to="/" className="home mt-5 ">
         Home
+      </Link>
+      <Link to="/Work" className="workhead">
+        Work
       </Link>
       <div className="d-flex text-align-center justify-content-center mt-5">
         <h1
