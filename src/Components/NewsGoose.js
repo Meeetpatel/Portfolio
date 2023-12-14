@@ -1,47 +1,33 @@
+// NewsGoose.js
+
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"; // Import the AOS styles
 import newsgoose from "./NewsGoose.mp4";
 import { Link } from "react-router-dom";
+import "./NewsGoose.css"; // Import the new CSS file
 import "./contact.css";
+
 export default function NewsGoose() {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
 
   return (
-    <div className="mb-5">
+    <>
       <Link to="/" className="home mt-5 ">
         Home
       </Link>
-      <Link to="/Work" className="workhead">
-        Work
+      <Link to="/Work" className="workhead mt-5">
+        Meet.Work
       </Link>
       <div className="d-flex text-align-center justify-content-center mt-5">
-        <h1
-          style={{
-            fontFamily: "Arial, Helvetica, sans-serif",
-            fontWeight: "600",
-            color: "orangered",
-            fontSize: "4vw",
-          }}
-          data-aos="fade-down"
-        >
+        <h1 className="page-title" data-aos="fade-down">
           NewsGoose
         </h1>
       </div>
-      <div
-        style={{
-          textAlign: "center",
-          fontSize: "2vw",
-          fontFamily: "Arial, Helvetica, sans-serif",
-          marginLeft: "10%",
-          marginRight: "10%",
-          marginTop: "10%",
-          margin: "10%",
-        }}
-      >
-        <p data-aos="flip-left">
+      <div className="newsgoosepara" data-aos="flip-left">
+        <p>
           I developed this App using React.js, integrating a news API to fetch
           real-time data and displayed it using dynamic CSS with the help of
           Bootstrap. Additionally, I added some dynamic functionality such as a
@@ -51,12 +37,12 @@ export default function NewsGoose() {
           local environment:
         </p>
       </div>
-      <div className="d-flex text-align-center justify-content-center mt-5">
-        <video data-aos="fade-down" width="90%" height="50%" controls>
+      <div className="video-container" data-aos="fade-down">
+        <video width="90%" height="50%" controls>
           <source src={newsgoose} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-    </div>
+    </>
   );
 }

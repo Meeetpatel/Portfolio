@@ -60,6 +60,14 @@ body{
     animation: contactlogo1 1s forwards ;
     
 }
+.card{
+    box-shadow: 6px 6px 3px rgba(225, 225, 225, 0.2);
+   background-color: rgb(0, 129, 172); ;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    width: 18vw;
+ }
 .card-body{
     align-items: center;
     justify-content: center;
@@ -73,9 +81,39 @@ body{
     font-size: 1.5vw;
     color: white;
 }
-.card{
-    box-shadow: 6px 6px 3px rgba(225, 225, 225, 0.2);
-   background-color: rgb(0, 129, 172); ;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
- }
+.carddiv{
+    display: flex;
+    justify-content: center;
+}
+
+ @media (max-width: 650px) {
+    /* Adjust the styling for screens wider than 576 pixels */
+    .carddiv{
+        display: block;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .card{
+        
+        width: 60vw;
+        margin-bottom: 10px;
+        margin-left: 20vw;
+    }
+    .card-text{
+        font-size: 3vw;
+    }
+    .para1{
+        font-size: 4vw;
+        margin-bottom: 15%;
+    }
+    .mywork{
+        font-size: 8vw;
+    }
+    .home{
+        font-size: 6vw;
+        margin-left: 10vw;
+    }
+  }

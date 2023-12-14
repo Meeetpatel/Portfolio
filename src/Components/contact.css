@@ -101,4 +101,21 @@ a:hover{
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
+@media (max-width:650px) {
+    .home{
+        font-size: 4vw;
+        margin-left: 90%;
+        margin-right: 10%;
+    }
+  .para{
+    font-size: 4vw;
 
+  }
+  .create{
+    font-size: 15vw;
+    margin-bottom: 30%;
+  }
+  .links{
+    font-size: 4vw;
+  }
+}

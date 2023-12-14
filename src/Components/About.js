@@ -28,7 +28,7 @@ export default function About() {
     <>
       <div className="background-section">
         <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-          <Link to="/" className="home mt-5">
+          <Link to="/" className="home">
             Home
           </Link>
         </div>
@@ -38,6 +38,7 @@ export default function About() {
           </p>
         </div>
         <h1
+          className="skill"
           style={{
             display: "flex",
             justifyContent: "center",
@@ -49,7 +50,7 @@ export default function About() {
             animationDelay: "1s",
           }}
         >
-          Skills
+          Skills:
         </h1>
         <div className="skills mt-5">
           <span className="badge badge-pill badge1 ">HTML/CSS</span>
@@ -76,7 +77,7 @@ export default function About() {
             inherent. I prefer to keep learning, continue challenging myself,
             and do interesting things that matter.
           </p>
-          <p data-aos="fade-left">
+          <p className="p3" data-aos="fade-left">
             Fueled by high energy levels and boundless enthusiasm, I’m easily
             inspired and more then willing to follow my fascinations wherever
             they take me. I’m passionate, expressive, multi-talented spirit with
@@ -100,9 +101,7 @@ export default function About() {
       </div>
       <div>
         <Link to="/Contact">
-          <p className="home mb-5 mt-5 d-flex align-items-center justify-content-center">
-            Contact
-          </p>
+          <p className="contact mb-5 mt-5">Contact</p>
         </Link>
       </div>
     </>
