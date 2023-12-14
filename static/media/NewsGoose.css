@@ -1,0 +1,66 @@
+/* NewsGoose.css */
+
+/* General Styles */
+.mb-5 {
+    margin-bottom: 5rem;
+  }
+  
+  /* Navigation Links */
+  
+  .workhead {
+    text-decoration: none;
+    font-size: 2vw;
+    color: orangered;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+  }
+  
+  
+  
+  /* Page Title */
+  .page-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: orangered;
+    font-size: 4vw;
+  }
+  
+  /* Paragraph Styles */
+  .newsgoosepara {
+    text-align: center;
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10%;
+  }
+  
+  /* Video Styles */
+  .video-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+  
+  /* AOS Animation Styles */
+  [data-aos="fade-down"] {
+    transition: transform 2s;
+  }
+  
+  [data-aos="flip-left"] {
+    transition: transform 1s;
+  }
+  
+@media (max-width:650px){
+    .newsgoosepara{
+        font-size: 4vw;
+        margin-bottom: 25%;
+    }
+    .page-title{
+        margin-top: 15%;
+        font-size: 8vw;
+    }
+    .workhead{
+        font-size: 4vw;
+    }
+    
+}
