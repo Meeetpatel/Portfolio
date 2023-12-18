@@ -85,11 +85,10 @@ body{
     width: 18vw;
  }
  @media (max-width:650px){
-    .carddiv{
-        display: block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-left: 40%;
+    .para1{
+        font-size: 4vw;
+    }
+    .mywork{
+        font-size: 7vw;
     }
  }

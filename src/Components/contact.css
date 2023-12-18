@@ -105,4 +105,13 @@ a:hover{
     .home{
         font-size: 4vw
     }
+    .create{
+        font-size: 7vw;
+    }
+    .para{
+        font-size: 4vw;
+    }
+    .links{
+        font-size: 4vw;
+    }
 }

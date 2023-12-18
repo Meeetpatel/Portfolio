@@ -1,0 +1,30 @@
+
+  .newshead {
+    font-weight: 600;
+    color: orangered;
+    font-size: 4vw;
+    font-family: "Arial, Helvetica, sans-serif";
+  }
+
+  .newspara {
+    text-align: center;
+    font-size: 2vw;
+    margin: 10%;
+  }
+  
+  video {
+    width: 90%;
+    height: 50%;
+  }
+  @media (max-width: 650px) {
+    .newshead {
+      font-size: 7vw;
+    }
+    .newspara {
+      font-size: 4vw;
+    }
+    .workhead{
+        font-size: 4vw;
+    }
+  }
+  
