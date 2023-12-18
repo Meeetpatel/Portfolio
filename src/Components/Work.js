@@ -81,7 +81,11 @@ const Work = () => {
           and Node.JS. Check out my latest web software development portfolio
           projects.
         </p>
+        <p className="para2">
+          Note: Open link in a new window to visit the site
+        </p>
       </div>
+
       <div className="carddiv">
         <Card
           imageUrl={newsgoose}
