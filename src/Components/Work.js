@@ -16,7 +16,7 @@ const Card = ({ imageUrl, title, description, link, aosAnimation }) => {
   };
 
   const calculateRotation = () => {
-    const tiltMax = 70;
+    const tiltMax = 90;
     const { x, y } = mousePosition;
 
     const rotationX = (y / window.innerHeight - 0.5) * tiltMax;
@@ -30,7 +30,6 @@ const Card = ({ imageUrl, title, description, link, aosAnimation }) => {
       <div
         className="card"
         style={{
-          width: "18rem",
           transform: calculateRotation(),
         }}
         onMouseMove={handleMouseMove}
@@ -83,7 +82,7 @@ const Work = () => {
           projects.
         </p>
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="carddiv">
         <Card
           imageUrl={newsgoose}
           title="NewsGoose"

@@ -2,19 +2,12 @@
    
     background-color: black;
     background-image: url("./meet.jpg");
-    font-size: 10vw; /* Adjust the font size as needed */
     background-repeat: no-repeat;
     background-position: right ;
     height: 100vh;
     animation: zoomOut 1s ease-in-out;
   }
-  @media (max-width: 768px) {
-    .home-container {
-      background-size: contain; /* Adjust background size for smaller screens */
-      font-size: 20vw;
-      
-    }
-  }
+  
 .hello {
     text-decoration: none;
     color:white;
@@ -26,6 +19,7 @@
     line-height: 100%;
     transition: margin-left 0.3s ease;
     animation: contactlogo1 1s forwards;
+    font-size: 10vw; 
 }
 .meet{
     opacity: 0;
@@ -39,6 +33,7 @@
     transition: margin-left 0.3s ease;
     animation: contactlogo1 1s forwards ;
     animation-delay: 1s;
+    font-size: 10vw; 
 }
 .meet2{
     opacity: 0;
@@ -52,6 +47,7 @@
     transition: margin-left 0.3s ease;
     animation: contactlogo1 1s forwards ;
     animation-delay: 2s;
+    font-size: 10vw; 
 }
 .hovered{
     margin-left: 5%; /* Adjust the percentage to control the slide distance */
@@ -75,5 +71,26 @@
     }
     to {
       transform: scale(1);
+    }
+  }
+  @media (max-width: 768px) {
+    .home-container {
+      background-size: contain; /* Adjust background size for smaller screens */
+   
+      
+    }
+
+    .hello{
+      margin-top: 50%;
+      font-size: 18vw;
+    }
+    .meet{
+      margin-top: 10%;
+      font-size: 18vw;
+
+    }
+    .meet2{
+      margin-top: 10%;
+      font-size: 18vw;
     }
   }

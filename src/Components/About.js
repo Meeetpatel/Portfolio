@@ -28,7 +28,7 @@ export default function About() {
     <>
       <div className="background-section">
         <div className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-          <Link to="/" className="home mt-5">
+          <Link to="/" className="home">
             Home
           </Link>
         </div>
@@ -70,7 +70,7 @@ export default function About() {
             Managing Partner,front-end developer & General manager.
           </p>
 
-          <p data-aos="fade-right">
+          <p style={{ color: "orangered" }} data-aos="fade-right">
             I don’t like to define myself by the work I’ve done. I define myself
             by the work I want to do. Skills can be taught, personality is
             inherent. I prefer to keep learning, continue challenging myself,
@@ -97,13 +97,12 @@ export default function About() {
             dynamic team or organization.
           </p>
         </div>
-      </div>
-      <div>
-        <Link to="/Contact">
-          <p className="home mb-5 mt-5 d-flex align-items-center justify-content-center">
-            Contact
-          </p>
-        </Link>
+
+        <div>
+          <Link to="/Contact">
+            <p className="contact mb-5">Contact</p>
+          </Link>
+        </div>
       </div>
     </>
   );
