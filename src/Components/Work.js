@@ -81,9 +81,6 @@ const Work = () => {
           and Node.JS. Check out my latest web software development portfolio
           projects.
         </p>
-        <p className="para2">
-          Note: Open link in a new window to visit the site
-        </p>
       </div>
 
       <div className="carddiv">
@@ -93,9 +90,13 @@ const Work = () => {
           description="A daily News app"
           link="/Newsgoose"
           aosAnimation="flip-left"
+          onClick={() => window.open("/Newsgoose", "_blank")}
         />
         <a
           href="https://meeetpatel.github.io/Shreehari/"
+          onClick={() =>
+            window.open("https://meeetpatel.github.io/Shreehari/", "_blank")
+          }
           style={{
             marginLeft: "10%",
             marginRight: "10%",
@@ -106,15 +107,19 @@ const Work = () => {
             imageUrl={shreehari}
             title="Shree Hari"
             description="Interior Designs"
-            link="https://meeetpatel.github.io/Shreehari/"
           />
         </a>
-        <a href="https://meeetpatel.github.io/TextUtils/" data-aos="flip-right">
+        <a
+          href="https://meeetpatel.github.io/TextUtils/"
+          onClick={() =>
+            window.open("https://meeetpatel.github.io/TextUtils/", "_blank")
+          }
+          data-aos="flip-right"
+        >
           <Card
             imageUrl={textutils}
             title="Textutils"
             description="Modify your text"
-            link="https://meeetpatel.github.io/TextUtils/"
           />
         </a>
       </div>
