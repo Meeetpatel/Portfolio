@@ -110,16 +110,16 @@ const Work = () => {
           />
         </a>
         <a
-          href="https://meeetpatel.github.io/TextUtils/"
+          href="https://meeetpatel.github.io/Shopoholic/"
           onClick={() =>
-            window.open("https://meeetpatel.github.io/TextUtils/", "_blank")
+            window.open("https://meeetpatel.github.io/Shopoholic/", "_blank")
           }
           data-aos="flip-right"
         >
           <Card
             imageUrl={textutils}
-            title="Textutils"
-            description="Modify your text"
+            title="Shopoholic"
+            description="An E-commerce Website"
           />
         </a>
       </div>
