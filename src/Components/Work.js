@@ -3,7 +3,7 @@ import "./works.css";
 import shreehari from "./shreehari.jpg";
 import { Link } from "react-router-dom";
 import newsgoose from "./icon.png";
-import textutils from "./textutils.png";
+import Shopoholic from "./Shopoholic.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -92,34 +92,36 @@ const Work = () => {
           aosAnimation="flip-left"
           onClick={() => window.open("/Newsgoose", "_blank")}
         />
+
         <a
-          href="https://meeetpatel.github.io/Shreehari/"
+          href="https://meeetpatel.github.io/Shopoholic/"
           onClick={() =>
-            window.open("https://meeetpatel.github.io/Shreehari/", "_blank")
+            window.open("https://meeetpatel.github.io/Shopoholic/", "_blank")
           }
           style={{
             marginLeft: "10%",
             marginRight: "10%",
           }}
+          data-aos="flip-right"
+        >
+          <Card
+            imageUrl={Shopoholic}
+            title="Shopoholic"
+            description="E-commerce App"
+          />
+        </a>
+
+        <a
+          href="https://meeetpatel.github.io/Shreehari/"
+          onClick={() =>
+            window.open("https://meeetpatel.github.io/Shreehari/", "_blank")
+          }
           data-aos="fade-down"
         >
           <Card
             imageUrl={shreehari}
             title="Shree Hari"
             description="Interior Designs"
-          />
-        </a>
-        <a
-          href="https://meeetpatel.github.io/Shopoholic/"
-          onClick={() =>
-            window.open("https://meeetpatel.github.io/Shopoholic/", "_blank")
-          }
-          data-aos="flip-right"
-        >
-          <Card
-            imageUrl={textutils}
-            title="Shopoholic"
-            description="An E-commerce Website"
           />
         </a>
       </div>
