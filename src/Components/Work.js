@@ -94,9 +94,9 @@ const Work = () => {
         />
 
         <a
-          href="https://meeetpatel.github.io/Shopoholic/"
+          href="https://shopoholic-front-end.onrender.com/"
           onClick={() =>
-            window.open("https://meeetpatel.github.io/Shopoholic/", "_blank")
+            window.open("https://shopoholic-front-end.onrender.com/", "_blank")
           }
           style={{
             marginLeft: "10%",
